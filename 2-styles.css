@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.toggle {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  margin: 20px 0 0 20px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.toggle .toggle-cb {
+  display: none;
+}
+
+.toggle .toggle-cb:checked+.toggle-label .toggle-inner {
+  background-color: #E1013C;
+}
+
+.toggle .toggle-cb:checked+.toggle-label .toggle-switch {
+  transform: translate(90px, -56px);
+}
+
+.toggle .toggle-inner {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #C3C3C3;
+  width: 100%;
+  height: 100%;
+  background-color: #EBEBEB;
+  border-radius: 50px;
+}
+
+.toggle .toggle-inner::after {
+  content: "No";
+  position: absolute;
+  right: 33px;
+  top: 10px;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #C3C3C3;
+}
+
+.toggle .toggle-switch {
+  z-index: 1;
+  transform: translate(0px, -56px);
+  background-color: #FFFFFF;
+  border: 1px solid #C3C3C3;
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.toggle-cb:checked+.toggle-label .toggle-inner::after {
+  content: "Yes";
+  right: 0;
+  left: 33px;
+  color: #FFFFeb;
+}

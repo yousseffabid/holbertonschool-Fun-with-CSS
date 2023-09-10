@@ -1,0 +1,26 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  color: #A11C3A;
+  text-decoration: none;
+  position: relative;
+}
+
+a::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #A11C3A;
+  transition: all 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
